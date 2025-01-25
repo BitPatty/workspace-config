@@ -1,0 +1,345 @@
+{
+    /// Don't open last editor or workspace when launching code
+    "workbench.startupEditor": "none",
+    "window.restoreWindows": "none",
+    // See https://stackoverflow.com/questions/79089362/visual-studio-code-on-kde-causes-kdialog-to-allocate-infinite-memory-until-linux
+    "files.simpleDialog.enable": true,
+    // Prevents paste on middle click
+    "editor.selectionClipboard": false,
+    // Cursor style
+    "editor.cursorBlinking": "blink",
+    "editor.cursorStyle": "underline",
+    // Zig (ziglang.vscode-zig) extension
+    "zig.formattingProvider": "off",
+    "zig.zls.enabled": "on",
+    "zig.zls.enableSnippets": false,
+    "zig.zls.semanticTokens": "none",
+    "zig.zls.completionLabelDetails": false,
+    "zig.zls.enableArgumentPlaceholders": false,
+    "zig.zls.inlayHintsShowStructLiteralFieldType": false,
+    "zig.zls.inlayHintsShowParameterName": false,
+    "zig.zls.inlayHintsShowBuiltin": false,
+    "zig.zls.inlayHintsShowVariableTypeHints": false,
+    // Language specific settings
+    "[javascript]": {
+        "editor.defaultFormatter": "bitpatty.trailing-whitespace-trimmer"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "bitpatty.trailing-whitespace-trimmer",
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "bitpatty.trailing-whitespace-trimmer",
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "bitpatty.trailing-whitespace-trimmer",
+    },
+    "[zig]": {
+        "editor.defaultFormatter": "bitpatty.trailing-whitespace-trimmer"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "bitpatty.trailing-whitespace-trimmer"
+    },
+    // Default formatter settings
+    "editor.defaultFormatter": "bitpatty.trailing-whitespace-trimmer",
+    "editor.formatOnSave": true,
+    // Display whitespace in diffs
+    "diffEditor.ignoreTrimWhitespace": false,
+    // Font configuration
+    "terminal.integrated.fontFamily": "'Iosevka Fixed Curly Slab', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontFamily": "'Iosevka Fixed Curly Slab', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontLigatures": false,
+
+    // Disable copilot
+    "github.copilot.enable": {
+        "*": false
+    },
+
+    // Disable some popups
+    "explorer.confirmDragAndDrop": false,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+
+    // Disable some components that I don't use
+    "editor.stickyScroll.enabled": false,
+    "chat.commandCenter.enabled": false,
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "window.menuBarVisibility": "hidden",
+    "window.titleBarStyle": "custom",
+
+    // Move some components
+    "workbench.activityBar.location": "bottom",
+    "workbench.sideBar.location": "left",
+
+    // Minimap
+    "editor.minimap.enabled": false,
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.scale": 1,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.side": "right",
+    "editor.minimap.size": "proportional",
+
+    // Disable local echo, otherwise credentials might be shown
+    // due to latency
+    "terminal.integrated.localEchoLatencyThreshold": -1,
+
+    // Misc
+    "editor.codeLens": true,
+    "editor.detectIndentation": true,
+    "gitlens.blame.highlight.enabled": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+
+    // Typescript
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "typescript.referencesCodeLens.enabled": true,
+    "typescript.referencesCodeLens.showOnAllFunctions": true,
+    "typescript.reportStyleChecksAsWarnings": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+
+    // Color configuration
+    "workbench.colorCustomizations": {
+        // Default foreground
+        "foreground": "#ffffff",
+
+        // Editor
+        "editor.background": "#0a0a0a",
+        "editor.foreground": "#fff",
+
+        // Sidebar
+        "sideBar.background": "#121212",
+        "sideBar.foreground": "#fff",
+        "sideBarSectionHeader.background": "#0a0a0a",
+        "sideBarSectionHeader.foreground": "#ffffff",
+        "sideBar.border": "#0a0a0a",
+        "sideBar.dropBackground": "#ffffff88",
+        "sideBarActivityBarTop.border": "#ffffff88",
+        "sideBarSectionHeader.border": "#ffffff88",
+        "sideBarTitle.border": "#0a0a0a",
+        "sideBarStickyScroll.background": "#0a0a0a88",
+        "sideBarStickyScroll.border": "#0a0a0a88",
+        "sideBarStickyScroll.shadow": "#0a0a0a88",
+        "sideBarTitle.background": "#0a0a0a",
+        "sideBarTitle.foreground": "#fff",
+
+        // Activity bar (file explorer, search etc. icons)
+        "activityBar.background": "#0a0a0a",
+        "activityBar.border": "#0a0a0a",
+        "activityBar.activeBackground": "#0a0a0a",
+        "activityBar.activeBorder": "#0a0a0a",
+        "activityBar.activeFocusBorder": "#0a0a0a",
+        "activityBar.dropBorder": "#0a0a0a",
+        "activityBar.foreground": "#fff",
+        "activityBar.inactiveForeground": "#fff",
+        "activityBarBadge.background": "#fff",
+        "activityBarBadge.foreground": "#0a0a0a",
+        "activityBarTop.activeBackground" : "#0a0a0a",
+        "activityBarTop.activeBorder": "#0a0a0a",
+        "activityBarTop.background": "#0a0a0a",
+        "activityBarTop.dropBorder": "#0a0a0a",
+        "activityBarTop.foreground": "#fff",
+        "activityBarTop.inactiveForeground": "#ffffff88",
+
+        // Status bar at bottom
+        "statusBar.background": "#ffffff",
+        "statusBar.foreground": "#0a0a0a",
+        "statusBar.border": "#0a0a0a",
+        "statusBar.debuggingBackground": "#f87800",
+        "statusBar.debuggingBorder": "#f87800",
+        "statusBar.debuggingForeground": "#fff",
+        "statusBar.focusBorder": "#ff0000",
+        "statusBar.noFolderBackground": "#ff0000",
+        "statusBar.noFolderBorder": "#ff0000",
+        "statusBar.noFolderForeground": "#fff",
+        "statusBarItem.activeBackground": "#0a0a0a",
+        "statusBarItem.compactHoverBackground": "#0a0a0a",
+        "statusBarItem.errorBackground": "#ff0000",
+        "statusBarItem.errorForeground": "#ff0000",
+        "statusBarItem.focusBorder": "#ff0000",
+        "statusBarItem.errorHoverBackground": "#ff0000",
+        "statusBarItem.errorHoverForeground": "#ff0000",
+        "statusBarItem.hoverBackground": "#0a0a0a",
+        "statusBarItem.hoverForeground": "#fff",
+        "statusBarItem.offlineBackground": "#ff0000",
+        "statusBarItem.offlineForeground": "#ff0000",
+        "statusBarItem.prominentBackground": "#ff0000",
+        "statusBarItem.offlineHoverBackground": "#ff0000",
+        "statusBarItem.offlineHoverForeground": "#ff0000",
+        "statusBarItem.prominentForeground": "#ff0000",
+        "statusBarItem.prominentHoverBackground": "#ff0000",
+        "statusBarItem.prominentHoverForeground": "#ff0000",
+        "statusBarItem.remoteBackground": "#fff",
+        "statusBarItem.remoteForeground": "#0a0a0a",
+        "statusBarItem.remoteHoverBackground": "#0a0a0a",
+        "statusBarItem.remoteHoverForeground": "#ffffff",
+        "statusBarItem.warningBackground": "#ff0000",
+        "statusBarItem.warningForeground": "#ff0000",
+        "statusBarItem.warningHoverBackground": "#ff0000",
+        "statusBarItem.warningHoverForeground": "#ff0000",
+
+        // Code sidebar
+        "scrollbarSlider.activeBackground": "#77D4CB",
+        "scrollbarSlider.hoverBackground": "#8CE6DA",
+        "scrollbarSlider.background": "#77D4CB",
+
+        // Also top bar on editors
+        "scrollbar.shadow": "#0a0a0a",
+
+        // Sticky scroll
+        "editorStickyScroll.background": "#ffffff",
+        "editorStickyScroll.shadow": "#ff0000",
+        "editorStickyScroll.border": "#ff0000",
+        "editorStickyScrollHover.background": "#ff0000",
+        "peekViewEditorStickyScroll.background": "#ff0000",
+
+        // Minimap
+        "minimap.background": "#ffffff11",
+        "minimapSlider.activeBackground": "#ffffff88",
+        "minimap.errorHighlight": "#ff0000",
+        "minimapSlider.background": "#77D4CB88",
+        "minimapSlider.hoverBackground": "#77D4CBbb",
+        "minimap.findMatchHighlight": "#06c098ee",
+        "minimap.foregroundOpacity":"#ff0000",
+        "minimap.infoHighlight": "#ff0000",
+        "minimap.selectionHighlight": "#eb9c09ee",
+        "minimap.selectionOccurrenceHighlight": "#eb9c09ee",
+        "minimap.warningHighlight": "#ff0000",
+        "minimapGutter.addedBackground": "#2ea043",
+        "minimapGutter.deletedBackground":"#f85149",
+        "minimapGutter.modifiedBackground":"#0078d4",
+
+        // Badge
+        "badge.background": "#ffffff",
+        "badge.foreground": "#0a0a0a",
+
+        // Window Title Bar
+        "titleBar.border": "#0a0a0a",
+        "titleBar.background": "#0a0a0a",
+        "titleBar.foreground": "#fff",
+        "titleBar.activeBackground": "#0a0a0a",
+        "titleBar.inactiveBackground": "#0a0a0a",
+        "titleBar.inactiveForeground": "#fff",
+        "titleBar.activeForeground": "#fff",
+
+        // Panels
+        "panel.background": "#0a0a0a",
+        "panel.border": "#fff",
+        "panel.dropBorder": "#0a0a0a",
+        "panelInput.border": "#0a0a0a",
+        "panelSection.border": "#0a0a0a",
+        "panelSection.dropBackground": "#0a0a0a",
+        "panelSectionHeader.background": "#0a0a0a",
+        "panelSectionHeader.border": "#0a0a0a",
+        "panelSectionHeader.foreground": "#fff",
+        "panelStickyScroll.background": "#fff",
+        "panelStickyScroll.border": "#fff",
+        "panelStickyScroll.shadow": "#0a0a0add",
+        "panelTitle.activeBorder": "#0a0a0a",
+        "panelTitle.activeForeground": "#fff",
+        "panelTitle.border": "#ffffff88",
+        "panelTitle.inactiveForeground": "#ffffff88",
+
+        // Tabs
+		"tab.activeBackground": "#0a0a0a",
+		"tab.activeBorder": "#0a0a0a",
+		"tab.activeBorderTop": "#fff",
+		"tab.activeForeground": "#ffffffff",
+		"tab.border": "#0a0a0a",
+		"tab.dragAndDropBorder": "#ffffff",
+		"tab.hoverBackground": "#0a0a0a",
+		"tab.inactiveBackground": "#0a0a0a",
+		"tab.inactiveForeground": "#ffffff88",
+		"tab.inactiveModifiedBorder": "#ff0000",
+		"tab.lastPinnedBorder": "#0a0a0a",
+		"tab.selectedBackground": "#0a0a0a",
+		"tab.selectedBorderTop": "#fff",
+		"tab.selectedForeground": "#fff",
+		"tab.unfocusedActiveBackground": "#0a0a0a",
+		"tab.unfocusedActiveBorder": "#0a0a0a",
+		"tab.unfocusedActiveBorderTop": "#fff",
+		"tab.unfocusedActiveForeground": "#fff",
+		"tab.unfocusedActiveModifiedBorder": "#ff0000",
+		"tab.unfocusedHoverBackground": "#0a0a0a",
+		"tab.unfocusedInactiveBackground": "#0a0a0a",
+		"tab.unfocusedInactiveForeground": "#ffffff88",
+		"tab.unfocusedInactiveModifiedBorder": "#ff0000",
+        "tab.activeModifiedBorder": "#ff0000",
+        "tab.hoverBorder": "#0a0a0a",
+        "tab.hoverForeground": "#fff",
+        "tab.unfocusedHoverBorder": "#ff0000",
+        "tab.unfocusedHoverForeground": "#fff",
+
+        // Input fields
+        "input.background": "#2488db",
+        "input.foreground": "#fff",
+        "input.placeholderForeground": "#fff",
+        "input.border": "#2488db",
+        "inputOption.activeBackground": "#2489db82",
+		"inputOption.activeBorder": "#2488db",
+
+        // Lists (File Explorer etc)
+		"list.activeSelectionForeground": "#fff",
+		"list.deemphasizedForeground": "#ff0000",
+		"list.dropBackground": "#0a0a0a88",
+		"list.dropBetweenBackground": "#0a0a0a88",
+		"list.filterMatchBackground": "#2aaaff",
+		"list.focusHighlightForeground": "#fff",
+		"list.focusOutline": "#0078d4",
+		"list.highlightForeground": "#2aaaff",
+		"list.hoverBackground": "#0a0a0a88",
+		"list.inactiveSelectionBackground": "#0a0a0a",
+        "list.activeSelectionBackground": "#0a0a0a",
+        "list.activeSelectionIconForeground": "#ffffff",
+        "list.filterMatchBorder": "#2aaaff",
+        "list.focusAndSelectionOutline":"#2aaaff",
+        "list.focusBackground": "#2aaaff",
+        "list.focusForeground":"#fff",
+        "list.hoverForeground": "#fff",
+        "list.inactiveFocusBackground":"#2aaaff88",
+        "list.inactiveFocusOutline":"#2aaaff88",
+        "list.inactiveSelectionForeground":"#fff",
+        "list.inactiveSelectionIconForeground":"#fff",
+
+        // List - also applies to tabs
+		"list.invalidItemForeground": "#b89500",
+		"list.warningForeground": "#e97c00",
+		"list.errorForeground": "#d33000",
+
+        // Misc
+        "editorPane.background": "#ff0000",
+
+    },
+    "window.customTitleBarVisibility": "auto",
+    "files.associations": {
+        ".env*": "dotenv"
+    },
+    "editor.tokenColorCustomizations": {
+        "[*Light*]": {
+            "textMateRules": [
+                {
+                    "scope": "ref.matchtext",
+                    "settings": {
+                        "foreground": "#000"
+                    }
+                }
+            ]
+        },
+        "[*Dark*]": {
+            "textMateRules": [
+                {
+                    "scope": "ref.matchtext",
+                    "settings": {
+                        "foreground": "#fff"
+                    }
+                }
+            ]
+        },
+        "textMateRules": [
+            {
+                "scope": "keyword.other.dotenv",
+                "settings": {
+                    "foreground": "#FF000000"
+                }
+            }
+        ]
+    },
+}
