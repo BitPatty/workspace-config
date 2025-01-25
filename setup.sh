@@ -15,7 +15,7 @@ declare -r ZIG_MINISIG="$SCRIPT_DIR/zig/zig-linux-x86_64-0.14.0-dev.2851+b074fb7
 declare -r ZIG_PUBLIC_KEY="RWSGOq2NVecA2UPNdBUZykf1CCb147pkmdtYxgb3Ti+JO/wCYvhbAb/U"
 
 # Firewall
-if confirm "Enable UFW"; then
+if confirm "Do you want to configure UFW"; then
   echo "Enabling ufw"
   assert_command ufw
   sudo ufw enable
@@ -82,7 +82,7 @@ if check_command dolphin && confirm "Do you want to configure dolphin"; then
 
   echo "Copying dolphinrc.."
   mkdir -p "$HOME/.config"
-  cat "$SCRIPT_DIR/dolphin/dolphinrc" > "$HOME/.config/dolphinrc"
+  cp "$SCRIPT_DIR/dolphin/dolphinrc" "$HOME/.config/dolphinrc"
 
   echo "Configured dolphin ✅"
 fi
@@ -94,16 +94,20 @@ if check_command konsole && confirm "Do you want to configure konsole"; then
 
   echo "Copying konsolerc.."
   mkdir -p "$HOME/.config"
-  cat "$SCRIPT_DIR/konsole/konsolerc" > "$HOME/.config/konsolerc"
+  cp "$SCRIPT_DIR/konsole/konsolerc" "$HOME/.config/konsolerc"
 
   echo "Copying bpty.profile.."
   mkdir -p "$HOME/.local/share/konsole"
 
   if [[ "$DID_INSTALL_FONTS" -eq "0" ]]; then
-    grep -v '^Font=' "$SCRIPT_DIR/konsole/bpty.profile" > "$HOME/.local/share/konsole/bpty.profile"
+    cp  "$SCRIPT_DIR/konsole/bpty.profile" "$HOME/.local/share/konsole/bpty.profile"
+    grep -v '^Font=' "$SCRIPT_DIR/konsole/bpty.profile" "$HOME/.local/share/konsole/bpty.profile"
   else
-    cat "$SCRIPT_DIR/konsole/bpty.profile" > "$HOME/.local/share/konsole/bpty.profile"
+    cp "$SCRIPT_DIR/konsole/bpty.profile" "$HOME/.local/share/konsole/bpty.profile"
   fi
+
+  echo "Copying bpty.colorscheme.."
+  cp "$SCRIPT_DIR/konsole/bpty.colorscheme" "$HOME/.local/share/konsole/bpty.colorscheme"
 
   echo "Configured konsole ✅"
 fi
@@ -114,7 +118,7 @@ if check_command spectacle && confirm "Do you want to configure spectacle"; then
 
   echo "Copying spectaclerc.."
   mkdir -p "$HOME/.config"
-  cat "$SCRIPT_DIR/spectacle/spectaclerc" > "$HOME/.config/spectaclerc"
+  cp "$SCRIPT_DIR/spectacle/spectaclerc" "$HOME/.config/spectaclerc"
 
   echo "Configured spectacle ✅"
 fi
@@ -134,7 +138,7 @@ if check_command code && confirm "Do you want to configure VSCode"; then
 fi
 
 # Zig
-if ! check_command asdfsdf && confirm "Do you want to configure zig"; then
+if confirm "Do you want to configure zig"; then
   echo "Configuring zig"
   assert_command wget wget
   assert_command minisign minisign

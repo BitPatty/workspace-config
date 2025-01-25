@@ -1,6 +1,6 @@
 [Appearance]
 AntiAliasFonts=true
-ColorScheme=BlackOnWhite
+ColorScheme=bpty
 
 [Cursor Options]
 CursorShape=2
