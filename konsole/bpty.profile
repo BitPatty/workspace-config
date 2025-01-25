@@ -17,7 +17,7 @@ TrimTrailingSpacesInSelectedText=true
 UnderlineFilesEnabled=true
 
 [Scrolling]
-ScrollBarPosition=1
+ScrollBarPosition=2
 
 [Terminal Features]
 BlinkingCursorEnabled=true

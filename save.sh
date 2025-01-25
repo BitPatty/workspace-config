@@ -45,7 +45,8 @@ if check_command konsole && confirm "Back up konsole configuration"; then
 
   if [[ -f "$HOME/.config/konsolerc" ]]; then
     echo "Copying konsolerc.."
-    grep -v '^State=' "$HOME/.config/konsolerc" > "$SCRIPT_DIR/konsole/konsolerc"
+    cat "$HOME/.config/konsolerc" > "$SCRIPT_DIR/konsole/konsolerc"
+    # grep -v '^State=' "$HOME/.config/konsolerc" > "$SCRIPT_DIR/konsole/konsolerc"
   fi
 
   if [[ -f "$HOME/.local/share/konsole/bpty.colorscheme" ]]; then

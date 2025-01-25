@@ -25,7 +25,7 @@ fi
 # Bash
 if confirm "Do you want to configure bash"; then
   echo "Configuring bash"
-  cp "$SCRIPT_DIR/bash/bashrc" "$HOME/.bashrc"
+  cat "$SCRIPT_DIR/bash/bashrc" > "$HOME/.bashrc"
   echo "Bash configured ✅"
 fi
 
@@ -82,7 +82,7 @@ if check_command dolphin && confirm "Do you want to configure dolphin"; then
 
   echo "Copying dolphinrc.."
   mkdir -p "$HOME/.config"
-  cp "$SCRIPT_DIR/dolphin/dolphinrc" "$HOME/.config/dolphinrc"
+  cat "$SCRIPT_DIR/dolphin/dolphinrc" > "$HOME/.config/dolphinrc"
 
   echo "Configured dolphin ✅"
 fi
@@ -94,20 +94,19 @@ if check_command konsole && confirm "Do you want to configure konsole"; then
 
   echo "Copying konsolerc.."
   mkdir -p "$HOME/.config"
-  cp "$SCRIPT_DIR/konsole/konsolerc" "$HOME/.config/konsolerc"
+  cat "$SCRIPT_DIR/konsole/konsolerc" > "$HOME/.config/konsolerc"
 
   echo "Copying bpty.profile.."
   mkdir -p "$HOME/.local/share/konsole"
 
   if [[ "$DID_INSTALL_FONTS" -eq "0" ]]; then
-    cp  "$SCRIPT_DIR/konsole/bpty.profile" "$HOME/.local/share/konsole/bpty.profile"
     grep -v '^Font=' "$SCRIPT_DIR/konsole/bpty.profile" "$HOME/.local/share/konsole/bpty.profile"
   else
-    cp "$SCRIPT_DIR/konsole/bpty.profile" "$HOME/.local/share/konsole/bpty.profile"
+    cat "$SCRIPT_DIR/konsole/bpty.profile" > "$HOME/.local/share/konsole/bpty.profile"
   fi
 
   echo "Copying bpty.colorscheme.."
-  cp "$SCRIPT_DIR/konsole/bpty.colorscheme" "$HOME/.local/share/konsole/bpty.colorscheme"
+  cat "$SCRIPT_DIR/konsole/bpty.colorscheme" > "$HOME/.local/share/konsole/bpty.colorscheme"
 
   echo "Configured konsole ✅"
 fi
@@ -118,7 +117,7 @@ if check_command spectacle && confirm "Do you want to configure spectacle"; then
 
   echo "Copying spectaclerc.."
   mkdir -p "$HOME/.config"
-  cp "$SCRIPT_DIR/spectacle/spectaclerc" "$HOME/.config/spectaclerc"
+  cat "$SCRIPT_DIR/spectacle/spectaclerc" > "$HOME/.config/spectaclerc"
 
   echo "Configured spectacle ✅"
 fi
@@ -131,8 +130,8 @@ if check_command code && confirm "Do you want to configure VSCode"; then
   code --install-extension bitpatty.trailing-whitespace-trimmer
   code --install-extension ms-vscode-remote.remote-containers
 
-  cp "$SCRIPT_DIR/vscode/settings.json" "$HOME/.config/Code/User/settings.json"
-  cp "$SCRIPT_DIR/vscode/keybindings.json" "$HOME/.config/Code/User/keybindings.json"
+  cat "$SCRIPT_DIR/vscode/settings.json" > "$HOME/.config/Code/User/settings.json"
+  cat "$SCRIPT_DIR/vscode/keybindings.json" > "$HOME/.config/Code/User/keybindings.json"
 
   echo "Configured VSCode ✅"
 fi
