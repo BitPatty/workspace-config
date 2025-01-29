@@ -311,7 +311,8 @@
     },
     "window.customTitleBarVisibility": "auto",
     "files.associations": {
-        ".env*": "dotenv"
+        ".env*": "dotenv",
+        "*.mdx": "markdown"
     },
     "editor.tokenColorCustomizations": {
         "[*Light*]": {
@@ -344,4 +345,10 @@
         ]
     },
     "extensions.ignoreRecommendations": true,
+    "[astro]": {
+        "editor.defaultFormatter": "astro-build.astro-vscode"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
 }
