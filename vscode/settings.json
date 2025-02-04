@@ -10,6 +10,7 @@
     // Cursor style
     "editor.cursorBlinking": "blink",
     "editor.cursorStyle": "underline",
+    "terminal.integrated.cursorStyle": "underline",
     // Zig (ziglang.vscode-zig) extension
     "zig.formattingProvider": "off",
     "zig.zls.enabled": "on",
@@ -47,7 +48,7 @@
     "diffEditor.ignoreTrimWhitespace": false,
     // Font configuration
     "terminal.integrated.fontFamily": "'Iosevka Fixed Curly Slab', 'Droid Sans Mono', 'monospace', monospace",
-    "editor.fontFamily": "'Iosevka Fixed Curly Slab', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontFamily": "'Iosevka Fixed Curly Slab',monospace",
     "editor.fontLigatures": false,
 
     // Disable copilot
