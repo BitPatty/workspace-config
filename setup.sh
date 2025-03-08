@@ -10,8 +10,7 @@ cd "$SCRIPT_DIR"
 declare -r LOCAL_FONTS_DIR="$HOME/.local/share/fonts"
 declare -r GIT_EMAIL="matteias.collet@protonmail.ch"
 declare -r GIT_USER="Matteias Collet"
-declare -r ZIG_DOWNLOAD_URL="https://ziglang.org/builds/zig-linux-x86_64-0.14.0-dev.2851+b074fb7dd.tar.xz"
-declare -r ZIG_MINISIG="$SCRIPT_DIR/zig/zig-linux-x86_64-0.14.0-dev.2851+b074fb7dd.tar.xz.minisig"
+declare -r ZIG_DOWNLOAD_URL="https://ziglang.org/download/0.14.0/zig-linux-x86_64-0.14.0.tar.xz"
 declare -r ZIG_PUBLIC_KEY="RWSGOq2NVecA2UPNdBUZykf1CCb147pkmdtYxgb3Ti+JO/wCYvhbAb/U"
 
 # Firewall
